@@ -1,0 +1,51 @@
+.marketing{
+    margin: 60px auto;
+}
+
+.carousel-card{
+    width: 60vw;
+    height: 380px;
+    margin: 10vw 20vw;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+.bg-half-transparent{
+    background-color: rgba(255,255,255, .5);
+}
+
+.bg-threeqtr-transparent{
+    background-color: rgba(255, 255, 255, .75)
+}
+.breathing-room{
+    padding: 10px 0;
+}
+
+.imported-typography{
+        color: #138496;
+        font-family: 'Six Caps';
+        font-size: 120px;
+        font-weight: 400;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+}
+
+.btn-outline-danger{
+    color: #BC2D58;
+    background-color: transparent;
+    background-image: none;
+    border-color: #BC2D58;
+}
+
+.btn-outline-danger:hover, .btn-outline-danger:focus, .btn-outline-danger:visited, .btn-outline-danger:active{
+    color: #fff;
+    background-color: #BC2D58;
+    border-color: #BC2D58;
+}
+
+@media (min-width: 992px){
+    .carousel-card{
+        display: initial;
+    }
+}
