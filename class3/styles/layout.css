@@ -1,0 +1,14 @@
+.container{
+    background-color: lightcoral;
+}
+
+.img-title-p{
+    display: block;
+}
+
+@media (min-width: 768px){
+    .img-title-p{
+        display: table-cell;
+        height: 200px;
+    }
+}
