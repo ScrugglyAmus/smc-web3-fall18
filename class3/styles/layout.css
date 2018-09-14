@@ -6,6 +6,15 @@
     display: block;
 }
 
+.card{
+    width: 30vw;
+    border: none;
+}
+
+.img-sm{
+    width: 100px;
+}
+
 @media (min-width: 768px){
     .img-title-p{
         display: table-cell;

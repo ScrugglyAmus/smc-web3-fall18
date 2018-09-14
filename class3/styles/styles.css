@@ -3,3 +3,7 @@
 
 @import url("layout.css");
 
+hr{
+    width: 90vw;
+    border-width: 2px;
+}
