@@ -1,0 +1,50 @@
+/* NAV STYLES */
+.bg-trans{
+    background-color: rgba(0,0,0,0) !important;
+}
+
+/* AN UNSTYLIZED BUTTON FOR THE IMAGES UNDEREATH THE MAIN */
+.btn-null{
+    background: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+/* MODAL EDITS */
+.no-border{
+    border: none;
+}
+
+.scrollable-modal-text{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+/* CAROUSEL EDITS */
+.carousel-control-prev-icon{
+    background-image: url(../assets/images/left-arrow.png);
+}
+
+.carousel-control-next-icon{
+    background-image: url(../assets/images/right-arrow.png);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    height: 30px;
+}
+
+.carousel-control-prev:focus, .carousel-control-prev:hover, .carousel-control-next:focus, .carousel-control-next:hover{
+    opacity: .5;
+}
+
+.carousel-control-prev:active, .carousel-control-next:active{
+    opacity: .9;
+}
+
+/* FOOTER */
+
+.footer{
+    line-height: 60px;
+}
