@@ -18,8 +18,8 @@
 }
 
 .scrollable-modal-text{
-    height: 200px;
-    overflow-y: scroll;
+    height: 200px !important;
+    overflow-y: auto;
 }
 
 .modal-footer-sm{
@@ -50,6 +50,7 @@
 /* FOOTER */
 .footer{
     line-height: 60px;
+    height: 60px;
 }
 
 /* RESPONSIVENESS */
@@ -58,7 +59,7 @@
     overflow-y: scroll;
 }
 
-@media (min-width: 768px){
+@media (min-width: 992px){
     .item-desc{
         height: auto;
     }
