@@ -1,0 +1,28 @@
+.jumbotron-custom{
+    height: 60vh;
+}
+
+.nav-space{
+    height: 88px;
+}
+
+.app-btn{
+    position: fixed;
+    right: 40px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.sinatra-main-img{
+    width: 400px;
+}
+
+/* MEDIA QUERRIES */
+
+@media (min-width: 768px){
+    .jumbotron-custom{
+        height: 80vh;
+    }
+}

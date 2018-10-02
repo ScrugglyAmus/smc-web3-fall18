@@ -12,14 +12,136 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             <link rel="stylesheet" href="styles/styles.css" type="text/css">
 
-            <title>Class 5</title>
+            <title>Frank Sinatra, PhD</title>
 
         </head>
 
-        <body class="containter">
+        <body>
 
-            <div class="row">
-                <h1 class="text-center m-5 col-12">Nothing to See Here</h1>
+            <!-- NAV -->
+            <div class="container-fluid">
+
+                <ul class="nav nav-pills custom-nav p-md-4 fixed-top">
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link custom-nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link custom-nav-link" href="#">My Practice</a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link custom-nav-link" href="#">Writings</a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link btn btn-success app-btn" href="#">Book an Appointment!</a>
+                    </li>
+
+                </ul>
+
+                <!-- SPACER -->
+                <div class="row">
+                    <div class="col-12 nav-space"></div>
+                </div>
+
+            </div>
+
+            <!-- JUMBOTRON -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 jumbotron-custom">
+                        <div class="jumbotron jumbotron-fluid text-center text-light">
+                            <div class="row">
+                                    <div class="col-6">
+                                            <img class="sinatra-main-img" src="assets/img/sinatra.png">
+                                        </div>
+                                <div class="col-5 p-md-5">
+                                    <h1 class="display-4">Frank Sinatra, PhD</h1>
+                                    <p class="lead">My name is Frank Sinatra and I am a licensed clinical psychologist located in Santa Monica, CA. I have been utilizing an eclectic approach to treating anxiety, depression, and relational issues in teens and adults for the past 22 years.</p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THERAPY TYPES CAROUSEL -->
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    <div class="col-12 mt-5">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                   <a href="#"><img class="d-block w-100" src="assets/img/treating-anxiety.png" alt="First slide"></a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="#"><img class="d-block w-100" src="assets/img/treating-depression.png" alt="Second slide"></a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="#"><img class="d-block w-100" src="assets/img/therapy-for-couples.png" alt="Third slide"></a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="#"><img class="d-block w-100" src="assets/img/therapy-for-families.png" alt="Fourth slide"></a>
+                                </div>
+
+                            </div>
+
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+                        </div>
+
+                        <button class="btn carousel-btns btn-secondary" id="start-btn">Start</button>
+                        <button class="btn carousel-btns btn-secondary" id="pause-btn">Pause</button>
+
+                        <div class="alert alert-danger alert-dismissible fade show mt-4 text-center d-none" role="alert">
+                            <h2><strong>Holy guacamole!</strong></h2>
+                            <p> Trying to get this carousel working is making me lose my mind!!</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- DALAI LAMA VIDEO -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="m-4">
+                    </div>
+                </div>
+                <div class="row text-center purple-text">
+                    <div class="col-12">
+                        <h1>Watch the video below!</h1>
+                        <h3>To get started on your journey towards prolonged happiness today.</h3>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IUEkDc_LfKQ?start=19" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
             </div>
 
             <!-- Optional JavaScript -->
@@ -27,6 +149,38 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+            <script>
+
+                $(document).ready(function(){
+
+                    // SO THE CAROUSEL WOULD NOT CYCLE ON LOAD, BUT WITH THIS ADDED, I COULD NOT FIGURE OUT HOW TO THEN MAKE THE BUTTONS WORK
+                    // $('.carousel').carousel({
+                    //     interval: false
+                    // });
+
+                    $('#start-btn').click(function(){
+                        // IDEA #1 THAT DID NOT WORK
+                        // $('.carousel').removeAttr('data-interval');
+                        $('.carousel').carousel('cycle');
+                        $('.alert').removeClass('d-none');
+                    });
+
+                    $('#pause-btn').click(function(){
+                        $('.carousel').carousel('pause');
+                        $('.alert').removeClass('d-none');
+                    })
+
+                });
+
+                // IDEA #2 THAT DID NOT WORK
+                // $(document).ready(function(){
+                //     $("#start-btn").click(function(){
+                //         $("#carouselExampleControls").attr("data-interval", 5000);
+                //     });
+                // });
+
+            </script>
 
         </body>
 

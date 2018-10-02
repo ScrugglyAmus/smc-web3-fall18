@@ -2,3 +2,62 @@
 
 @import url(typography.css);
 
+/* CUSTOMIZING THE JUMBOTRON */
+.jumbotron-custom{
+    background-image: linear-gradient(to bottom, #7b5bad, #f2fcfe);
+}
+
+.jumbotron{
+    background: transparent;
+}
+
+body{
+    background-color: #f2fcfe;
+}
+
+/* CUSTOM COLORS AND STATES FOR NAV */
+
+.purple-text{
+    color: #7b5bad;
+}
+
+.custom-nav{
+    background-color: #7b5bad;
+}
+
+.custom-nav-link{
+    color: #f2fcfe;
+}
+
+.custom-nav-link:active, .custom-nav-link:hover, .custom-nav-link.active{
+    color: #7b5bad !important;
+    background-color: #f2fcfe !important;
+}
+
+/* HOVER ANIMATIONS */
+
+.hover-expand{
+    transition: transform .2s ease-in-out !important;
+}
+
+.hover-expand:hover{
+    transform: scale(1.1);
+}
+
+/* CUSTOMIZING THE CAROUSEL */
+.carousel-control-next-icon{
+    background-image: url(../assets/img/right-arrow.png);
+}
+
+.carousel-control-prev-icon{
+    background-image: url(../assets/img/left-arrow.png);
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    height: 30px;
+}
+
+/* FOR HR'S */
+hr{
+    border-color: #aaaaaa;
+}
