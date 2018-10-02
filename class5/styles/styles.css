@@ -22,16 +22,23 @@ body{
 }
 
 .custom-nav{
-    background-color: #7b5bad;
+    background-color: #7b5bad !important;
 }
 
-.custom-nav-link{
-    color: #f2fcfe;
+.custom-nav-link, .app-btn{
+    color: #f2fcfe !important;
+    border-radius: 5px;
 }
 
-.custom-nav-link:active, .custom-nav-link:hover, .custom-nav-link.active{
-    color: #7b5bad !important;
-    background-color: #f2fcfe !important;
+@media (min-width: 768px){
+    .custom-nav-link{
+        color: #f2fcfe;
+    }
+    
+    .custom-nav-link:active, .custom-nav-link:hover, .custom-nav-link.active{
+        color: #7b5bad !important;
+        background-color: #f2fcfe !important;
+    }
 }
 
 /* HOVER ANIMATIONS */

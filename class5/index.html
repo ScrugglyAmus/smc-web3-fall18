@@ -19,60 +19,80 @@
         <body>
 
             <!-- NAV -->
-            <div class="container-fluid">
+            <div class="container-fluid custom-nav pt-2">
 
-                <ul class="nav nav-pills custom-nav p-md-4 fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav fixed-top">
+                    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand text-light display-1" href="#">Sinatra, PhD</a>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link custom-nav-link active" href="#">Home</a>
+                        </li>
+    
+                        <li class="nav-item mx-2">
+                            <a class="nav-link custom-nav-link" href="#">My Practice</a>
+                        </li>
+    
+                        <li class="nav-item mx-2">
+                            <a class="nav-link custom-nav-link" href="#">Writings</a>
+                        </li>
 
-                    <li class="nav-item mx-2">
-                        <a class="nav-link custom-nav-link active" href="#">Home</a>
-                    </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link custom-nav-link btn-success col-8 text-center mt-2 d-md-none" href="#">Book an Appointment!</a>
+                        </li>
 
-                    <li class="nav-item mx-2">
-                        <a class="nav-link custom-nav-link" href="#">My Practice</a>
-                    </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn btn-success app-btn d-none d-md-block" href="#">Book an Appointment!</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
 
-                    <li class="nav-item mx-2">
-                        <a class="nav-link custom-nav-link" href="#">Writings</a>
-                    </li>
-
-                    <li class="nav-item mx-2">
-                        <a class="nav-link btn btn-success app-btn" href="#">Book an Appointment!</a>
-                    </li>
-
-                </ul>
-
-                <!-- SPACER -->
-                <div class="row">
-                    <div class="col-12 nav-space"></div>
-                </div>
+                  <div class="nav-space"></div>
 
             </div>
 
             <!-- JUMBOTRON -->
             <div class="container-fluid">
+
                 <div class="row">
+
                     <div class="col-12 jumbotron-custom">
                         <div class="jumbotron jumbotron-fluid text-center text-light">
-                            <div class="row">
-                                    <div class="col-6">
+                            <div class="row justify-content-center">
+                                    <div class="col-md-6 col-10">
                                             <img class="sinatra-main-img" src="assets/img/sinatra.png">
                                         </div>
-                                <div class="col-5 p-md-5">
+                                <div class="col-md-5 d-none p-md-5 d-md-block">
                                     <h1 class="display-4">Frank Sinatra, PhD</h1>
-                                    <p class="lead">My name is Frank Sinatra and I am a licensed clinical psychologist located in Santa Monica, CA. I have been utilizing an eclectic approach to treating anxiety, depression, and relational issues in teens and adults for the past 22 years.</p>
+                                    <p class="lead">The name is Frank Sinatra and I am a licensed clinical psychologist located in Santa Monica, CA. I have been utilizing an eclectic approach to treating anxiety, depression, and relational issues in teens and adults for the past 22 years.</p>
                                 </div>
-                                <div class="col-1"></div>
+                                <div class="col-md-1"></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+                <div class="row d-block d-md-none">
+
+                        <div class="col-12 text-center purple-text">
+                            <p class="lead">The name is Frank Sinatra and I am a licensed clinical psychologist located in Santa Monica, CA. I have been utilizing an eclectic approach to treating anxiety, depression, and relational issues in teens and adults for the past 22 years.</p>
+                        </div>
+    
+                    </div>
+
             </div>
 
             <!-- THERAPY TYPES CAROUSEL -->
             <div class="container-fluid">
                 <div class="row no-gutters">
                     <div class="col-12 mt-5">
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide">
                             <div class="carousel-inner">
 
                                 <div class="carousel-item active">
@@ -104,9 +124,9 @@
                             </a>
 
                         </div>
-
-                        <button class="btn carousel-btns btn-secondary" id="start-btn">Start</button>
-                        <button class="btn carousel-btns btn-secondary" id="pause-btn">Pause</button>
+                        
+                        <button class="btn carousel-btns btn-secondary mt-3" id="start-btn">Start</button>
+                        <button class="btn carousel-btns btn-secondary mt-3" id="pause-btn">Pause</button>
 
                         <div class="alert alert-danger alert-dismissible fade show mt-4 text-center d-none" role="alert">
                             <h2><strong>Holy guacamole!</strong></h2>
@@ -129,18 +149,20 @@
                 </div>
                 <div class="row text-center purple-text">
                     <div class="col-12">
-                        <h1>Watch the video below!</h1>
-                        <h3>To get started on your journey towards prolonged happiness today.</h3>
+                        <h1 class="d-md-block d-none">Watch the video below!</h1>
+                        <h2 class="d-md-none">Watch the video below!</h2>
+                        <h3 class="d-md-block d-none">To get started on your journey towards prolonged happiness today.</h3>
+                        <p class="d-md-none">To get started on your journey towards prolonged happiness today.</p>
                     </div>
                 </div>
-                <div class="row my-5">
-                    <div class="col-3"></div>
-                    <div class="col-6">
+                <div class="row my-md-5 my-3">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 col-12">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IUEkDc_LfKQ?start=19" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-md-3"></div>
                 </div>
             </div>
 
@@ -158,6 +180,10 @@
                     // $('.carousel').carousel({
                     //     interval: false
                     // });
+
+                    $('.carousel').carousel({
+                        interval: 3000
+                    });
 
                     $('#start-btn').click(function(){
                         // IDEA #1 THAT DID NOT WORK
