@@ -93,7 +93,7 @@
                 <div class="row no-gutters">
                     <div class="col-12 mt-5">
                         <div id="carouselExampleControls" class="carousel slide">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner d-none" id="carousel-running">
 
                                 <div class="carousel-item active">
                                    <a href="#"><img class="d-block w-100" src="assets/img/treating-anxiety.png" alt="First slide"></a>
@@ -113,6 +113,26 @@
 
                             </div>
 
+                            <div class="carousel-inner" id="carousel-paused">
+
+                                    <div class="carousel-item active">
+                                       <a href="#"><img class="d-block w-100" src="assets/img/treating-anxiety.png" alt="First slide"></a>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <a href="#"><img class="d-block w-100" src="assets/img/treating-depression.png" alt="Second slide"></a>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <a href="#"><img class="d-block w-100" src="assets/img/therapy-for-couples.png" alt="Third slide"></a>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <a href="#"><img class="d-block w-100" src="assets/img/therapy-for-families.png" alt="Fourth slide"></a>
+                                    </div>
+    
+                                </div>
+
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
@@ -127,6 +147,7 @@
                         
                         <button class="btn carousel-btns btn-secondary mt-3" id="start-btn">Start</button>
                         <button class="btn carousel-btns btn-secondary mt-3" id="pause-btn">Pause</button>
+                        <button class="btn carousel-btns btn-success mt-3">Toggle</button>
 
                         <div class="alert alert-danger alert-dismissible fade show mt-4 text-center d-none" role="alert">
                             <h2><strong>Holy guacamole!</strong></h2>
@@ -185,16 +206,21 @@
                         interval: 3000
                     });
 
-                    $('#start-btn').click(function(){
-                        // IDEA #1 THAT DID NOT WORK
-                        // $('.carousel').removeAttr('data-interval');
-                        $('.carousel').carousel('cycle');
-                        $('.alert').removeClass('d-none');
-                    });
+                    // $('#start-btn').click(function(){
+                    //     // IDEA #1 THAT DID NOT WORK
+                    //     // $('.carousel').removeAttr('data-interval');
+                    //     $('.carousel').carousel('cycle');
+                    //     $('.alert').removeClass('d-none');
+                    // });
 
-                    $('#pause-btn').click(function(){
-                        $('.carousel').carousel('pause');
-                        $('.alert').removeClass('d-none');
+                    // $('#pause-btn').click(function(){
+                    //     $('.carousel').carousel('pause');
+                    //     $('.alert').removeClass('d-none');
+                    // })
+
+                    $('.carousel-btns').on("click", function(){
+                        $('#carousel-running').toggleClass('d-none');
+                        $('#carousel-paused').toggleClass('d-none');
                     })
 
                 });
