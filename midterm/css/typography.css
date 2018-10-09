@@ -9,6 +9,14 @@
     font-size: 78pt;
 }
 
+.mobile-splash-heading{
+    font-size: 60pt;
+}
+
+.drop-shadow{
+    text-shadow: 1px 1px 3px black;
+}
+
 @media (min-width: 768px){
     .lgr-txt{
         font-size: 40pt;

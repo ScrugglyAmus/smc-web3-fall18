@@ -16,6 +16,16 @@
     opacity: .9;
 }
 
+.index-body{
+    background-image: url(../assets/img/windmill-mobile.jpg);
+}
+
+@media (min-width: 768px){
+    .index-body{
+        background-image: url(../assets/img/windmill.jpg);
+    }
+}
+
 /* BOOTSTRAP ADJUSTMENTS */
 .bg-light{
     background-color: #ffffff !important;
