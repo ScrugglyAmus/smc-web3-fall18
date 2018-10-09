@@ -1,0 +1,16 @@
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.lobster{
+    font-family: 'Lobster', cursive;
+}
+
+.splash-heading{
+    font-size: 78pt;
+}
+
+@media (min-width: 768px){
+    .lgr-txt{
+        font-size: 40pt;
+    }
+}

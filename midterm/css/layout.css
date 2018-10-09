@@ -1,0 +1,20 @@
+/* CUSTOM STYLES */
+.nav-space{
+    height: 56px;
+}
+
+.index-body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: black;
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+.media-list-img{
+    width: 100px;
+}

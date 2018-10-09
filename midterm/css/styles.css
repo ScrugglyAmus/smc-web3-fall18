@@ -1,0 +1,22 @@
+/* OTHER LINKED STYLESHEETS */
+@import url(layout.css);
+
+@import url(typography.css);
+
+@import url(class-4-styles.css);
+
+
+/* CUSTOM STYLES */
+.opacity-drop{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.opacity-drop:active{
+    opacity: .9;
+}
+
+/* BOOTSTRAP ADJUSTMENTS */
+.bg-light{
+    background-color: #ffffff !important;
+}
