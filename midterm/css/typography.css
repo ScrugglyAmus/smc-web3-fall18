@@ -1,6 +1,7 @@
 /* IMPORTED FONTS */
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
+/* CUSTOM STYLES */
 .lobster{
     font-family: 'Lobster', cursive;
 }
@@ -17,8 +18,30 @@
     text-shadow: 1px 1px 3px black;
 }
 
+.custom-link{
+    color: #343a40 !important;
+}
+
+.custom-active, .custom-link:hover{
+    color: #fec108 !important;
+}
+
+.lrg-txt{
+    font-size: 40pt;
+}
+
+.text-xl{
+    font-size: 50pt;
+}
+
 @media (min-width: 768px){
     .lgr-txt{
         font-size: 40pt;
     }
+    
+    .text-xl{
+        font-size: 80pt;
+    }
 }
+
+/* EDITED BOOTSTRAP STYLES */

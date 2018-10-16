@@ -18,3 +18,15 @@ img{
 .media-list-img{
     width: 100px;
 }
+
+.logo{
+    width: 120px;
+}
+
+.contact-icon{
+    max-width: 44px;
+}
+
+.jumbotron-padding{
+    padding-top: 120px;
+}

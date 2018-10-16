@@ -19,36 +19,36 @@
     </head>
 
 
-    <body>
+    <body class="container-fluid">
 
         <!-- NAVIGATION -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
 
             <!-- LOGO -->
-            <a class="navbar-brand text-dark lobster lg-txt" href="../index.html">terminers.</a>
+            <a class="logo pb-2 mr-2" href="../index.html"><img src="../assets/img/text-logo-black.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             
             <!-- LINKS AND FORM -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link text-dark" href="../index.html">home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="about.html">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="products.html">products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="team.html">team</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="button" data-toggle="modal" data-target="#pop-up-modal">Subscribe!</button>
-            </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="../index.html">home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link custom-active" href="products.html">products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="team.html">team</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="button" data-toggle="modal" data-target="#pop-up-modal">Donate!</button>
+                </form>
             </div>
             
         </nav>
@@ -57,33 +57,54 @@
 
         <!-- PUP-UP MODAL -->
         <div class="modal fade" id="pop-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center">
-                <button type="button" class="close text-right px-3 pt-3" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <form>
-                    <div class="modal-body text-center">
-                    <h1 class="pb-4">Don't Miss Out!</h1>
-                    <h5><em>Sign up for our newsletter and get 15% off first purchase.</em></h5>
-                        
-                        <div class="form-group py-4 px-5">
-                        <input type="email" class="form-control mb-3" required autofill="off" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email address" name="email_input">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content text-center">
+                    <button type="button" class="close text-right px-3 pt-3" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <form>
+                        <div class="modal-body text-center">
+                        <h1 class="pb-2 lobster lrg-txt">Donate!</h1>
+                        <h5 class="pb-4"><em>Your donation helps illuminate a more sustainable future.</em></h5>
+    
+                            <input type="radio" id="ten" name="donation" checked>
+                            <label for="ten" class="pr-3">$10</label>
+                            <input type="radio" id="twenty-five" name="donation">
+                            <label for="ten" class="pr-3">$25</label>
+                            <input type="radio" id="fifty" name="donation">
+                            <label for="ten" class="pr-3">$50</label>
+                            <input type="radio" id="one-hundred" name="donation">
+                            <label for="ten">$100</label><br><br>
+                            <input type="radio" id="custom" name="donation">
+                            <label for="custom" class="pr-2">Custom</label>
+                            <input type="text" id="custom-input" name="donation" placeholder="amount" size="10" class="text-center">
+
+                            <hr>
+
+                            <section class="py-3">
+                                <button type="button" class="btn btn-outline-dark frequency-btn active">One Time</button>
+                                <button type="button" class="btn btn-outline-dark frequency-btn">Monthly</button>
+                                <button type="button" class="btn btn-outline-dark frequency-btn">Annually</button>
+                            </section>
+                            
                         </div>
-                        <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">I'm just doing this for the 15%</label>
+
+                        <div class="modal-footer bg-dark mt-3">
+
+                            <section class="col-lg-6 d-none d-lg-block pt-2 text-left">
+                                <input type="checkbox" id="newsletter-check" checked>
+                                <label for="newsletter-check" class="text-light d-inline-block"><small>Subscribe to our newsletter stay informed!</small></label>
+                            </section>
+                                
+                            <section class="col-12 col-lg-6 p-0 d-flex justify-content-end">
+                                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                                <button class="btn btn-warning disabled ml-3" id="email-submit-btn" type="submit">Continue</button>
+                            </section>
                         </div>
-                        
-                    </div>
-                    <div class="modal-footer bg-dark">
-                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                    <button class="btn btn-warning disabled" id="email-submit-btn" type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-            </div>
+
+                    </form>
+                </div>
+                </div>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -118,9 +139,10 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"><img src="../assets/img/right-arrow.png"></span>
                       <span class="sr-only">Next</span>
                     </a>
+
                   </div>
 
-                  <div id="carousel-running" class="carousel slide d-none" data-ride="carousel" data-interval="2500">
+                  <div id="carousel-running" class="carousel slide d-none" data-ride="carousel" data-interval="2000">
                         <div class="carousel-inner">
                           <div class="carousel-item active" id="black-shirt-main-2">
                             <img class="d-block w-100" src="../assets/img/t-shirt.jpg" alt="black-shirt">
@@ -143,15 +165,16 @@
                           <span class="carousel-control-next-icon" aria-hidden="true"><img src="../assets/img/right-arrow.png"></span>
                           <span class="sr-only">Next</span>
                         </a>
-                      </div>
+                        
+                    </div>
 
-                  <div class="row my-3">
-                      <div class="col-5"></div>
-                      <div class="col-2">
-                          <img src="../assets/img/cycle.png" class="opacity-drop" id="cycle-icon">
-                      </div>
-                      <div class="col-5"></div>
-                  </div>
+                    <div class="row my-3">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <img src="../assets/img/cycle.png" class="opacity-drop" id="cycle-icon">
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
     
                 <!-- NORMALLY THESE BUTTONS WOULD ONLY CHANGE THE STATE OF THE CAROUSEL ABOVE, BUT I THOUGHT THIS WOULD BE A NICE OPPORTUNITY TO TRY OUT A QUICK-SHOP-ESQUE FEATURE -->
                 <div class="row">
@@ -175,16 +198,31 @@
             </div>
             <div class="col-md-6 col-12 p-5">
               <div class="d-none d-md-block">
-              <h1>terminers. T-shirt</h1>
+              <h1>terminers. Tee</h1>
               <h3 class="text-muted my-3"><em>$20</em></h3>
             </div>
-              <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Viverra maecenas accumsan lacus vel facilisis. Justo nec 
-                ultrices dui sapien eget mi proin sed. Amet venenatis urna cursus eget nunc scelerisque 
-                viverra. Faucibus scelerisque eleifend donec pretium vulputate.</p>
-                <button type="button" class="btn btn-warning">Add to Cart</button>
+              <p class="pb-3">Designed for fit, comfort and style, the Men's <b>terminers.</b> Tee is made from 
+                  100% cotton and features our signature <b>terminers.</b> Logo at the waist.<br><br>
+                <em>*** 100% of proceeds go directly to the cause</em></p>
+                <form>
+                    <select>
+                        <option value="size">XS</option>
+                        <option value="size">S</option>
+                        <option value="size">M</option>
+                        <option value="size">L</option>
+                        <option value="size">XL</option>
+                        <option value="size">2XL</option>
+                    </select><br><br>
+                    <select>
+                        <option value="color">Black w/ White Graphic</option>
+                        <option value="color">White w/ Black Graphic</option>
+                        <option value="color">Black w/ Yellow Graphic</option>
+                        <option value="color">Yellow w/ White Graphic</option>
+                    </select><br><br>
+                    <button type="button" class="btn btn-warning">Add to Cart</button>
+                </form>
             </div>
-          </div>
+        </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -202,6 +240,7 @@
                 $('#cycle-icon').on('click', function(){
                     $('#carousel-running').toggleClass('d-none');
                     $('#carousel-paused').toggleClass('d-none');
+                    $('#cycle-icon').toggleClass('cycle-animation');
                 });
                 
                 // CAROUSEL THUMBNAIL SWITCHES

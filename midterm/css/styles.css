@@ -6,27 +6,92 @@
 @import url(class-4-styles.css);
 
 
+/* CSS ANIMATIONS */
+@keyframes spin{
+    100% {transform: rotate(360deg);}
+};
+
 /* CUSTOM STYLES */
-.opacity-drop{
+.opacity-drop, .contact-icon{
     opacity: .5;
     cursor: pointer;
 }
 
-.opacity-drop:active{
+.opacity-drop:active, .contact-icon:active{
     opacity: .9;
 }
 
 .index-body{
-    background-image: url(../assets/img/windmill-mobile.jpg);
+    /* WINDMILL IMAGE */
+    /* background-image: url(../assets/img/windmill-mobile.jpg); */
+    background-image: url(../assets/img/smoke-stack-mobile.jpg);
+}
+
+.display-img-about{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/img/windmill-desert.jpg);
+}
+
+.display-img-team{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/img/who-we-are.jpg);
 }
 
 @media (min-width: 768px){
     .index-body{
-        background-image: url(../assets/img/windmill.jpg);
+        /* WINDMILL IMAGE */
+        /* background-image: url(../assets/img/windmill.jpg); */
+        background-image: url(../assets/img/smoke-stack-2.jpg);
     }
 }
+
+.cycle-animation{
+    animation: spin 2s linear infinite;
+}
+
+.bg-black{
+    background: black;
+}
+
+
+
+
+
 
 /* BOOTSTRAP ADJUSTMENTS */
 .bg-light{
     background-color: #ffffff !important;
+}
+
+
+
+
+
+
+/* SCROLL DOWN ANIMATION TAKEN FROM CODEPEN */
+.arrow {
+    margin: 200px auto 0px;
+    width: 60px;
+  text-align: center;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }

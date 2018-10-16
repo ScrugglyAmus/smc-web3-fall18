@@ -19,36 +19,36 @@
     </head>
 
 
-    <body>
+    <body class="container-fluid p-0">
 
         <!-- NAVIGATION -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
 
             <!-- LOGO -->
-            <a class="navbar-brand text-dark lobster lg-txt" href="../index.html">terminers.</a>
+            <a class="logo pb-2 mr-2" href="../index.html"><img src="../assets/img/text-logo-black.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             
             <!-- LINKS AND FORM -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link text-dark" href="../index.html">home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="about.html">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="products.html">products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="team.html">team</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="button" data-toggle="modal" data-target="#pop-up-modal">Subscribe!</button>
-            </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="../index.html">home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link custom-active" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="products.html">products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="team.html">team</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="button" data-toggle="modal" data-target="#pop-up-modal">Donate!</button>
+                </form>
             </div>
             
         </nav>
@@ -57,74 +57,156 @@
 
         <!-- PUP-UP MODAL -->
         <div class="modal fade" id="pop-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content text-center">
+                    <button type="button" class="close text-right px-3 pt-3" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <form>
+                        <div class="modal-body text-center">
+                        <h1 class="pb-2 lobster lrg-txt">Donate!</h1>
+                        <h5 class="pb-4"><em>Your donation helps illuminate a more sustainable future.</em></h5>
+    
+                            <input type="radio" id="ten" name="donation" checked>
+                            <label for="ten" class="pr-3">$10</label>
+                            <input type="radio" id="twenty-five" name="donation">
+                            <label for="ten" class="pr-3">$25</label>
+                            <input type="radio" id="fifty" name="donation">
+                            <label for="ten" class="pr-3">$50</label>
+                            <input type="radio" id="one-hundred" name="donation">
+                            <label for="ten">$100</label><br><br>
+                            <input type="radio" id="custom" name="donation">
+                            <label for="custom" class="pr-2">Custom</label>
+                            <input type="text" id="custom-input" name="donation" placeholder="amount" size="10" class="text-center">
+
+                            <hr>
+
+                            <section class="py-3">
+                                <button type="button" class="btn btn-outline-dark frequency-btn active">One Time</button>
+                                <button type="button" class="btn btn-outline-dark frequency-btn">Monthly</button>
+                                <button type="button" class="btn btn-outline-dark frequency-btn">Annually</button>
+                            </section>
+                            
+                        </div>
+
+                        <div class="modal-footer bg-dark mt-3">
+
+                            <section class="col-lg-6 d-none d-lg-block pt-2 text-left">
+                                <input type="checkbox" id="newsletter-check" checked>
+                                <label for="newsletter-check" class="text-light d-inline-block"><small>Subscribe to our newsletter stay informed!</small></label>
+                            </section>
+                                
+                            <section class="col-12 col-lg-6 p-0 d-flex justify-content-end">
+                                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                                <button class="btn btn-warning disabled ml-3" id="email-submit-btn" type="submit">Continue</button>
+                            </section>
+                        </div>
+
+                    </form>
+                </div>
+                </div>
+        </div>
+
+        <!-- LEARN MORE MODALS -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="coal">
             <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center">
-                <button type="button" class="close text-right px-3 pt-3" data-dismiss="modal" aria-label="Close">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Terminating Coal Mining</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
-                <form>
-                    <div class="modal-body text-center">
-                    <h1 class="pb-4">Don't Miss Out!</h1>
-                    <h5><em>Sign up for our newsletter and get 15% off first purchase.</em></h5>
-                        
-                        <div class="form-group py-4 px-5">
-                        <input type="email" class="form-control mb-3" required autofill="off" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email address" name="email_input">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">I'm just doing this for the 15%</label>
-                        </div>
-                        
-                    </div>
-                    <div class="modal-footer bg-dark">
-                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                    <button class="btn btn-warning disabled" id="email-submit-btn" type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </div>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The burning of fossil fuels releases greenhouse gases into the atmosphere, increasing levels of CO2 and other gasses, trapping heat, and contributing to global climate change. Air pollution is another side-effect of fossil fuel use. Air pollution is generally more regional than the effects of carbon dioxide, and can have devastating impacts on local populations and ecosystems.<br><br>Coal is bad. We are fighting to end its mainstream utilization and in turn provide a more sustainable environment and cleaner world.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+                </div>
             </div>
         </div>
 
-        <!-- MAIN CONTENT -->
-
-        <div class="container-fluid">
-
-            <div class="jumbotron jumbotron-fluid text-dark bg-light text-center pt-4 pb-3 mb-0">
-                    <div class="container">
-                        <h1 class="display-4 lobster">What we do!</h1>
+        <div class="modal fade" tabindex="-1" role="dialog" id="energy">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Promoting Sustainable Energy</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-            </div>
-
-            <div class="row my-5">
-                <div class="col-md-2"></div>
-                <div class="col-12 col-md-8">
-                        <ul class="list-unstyled">
-                                <li class="media mb-5">
-                                  <img class="mr-5 media-list-img" src="../assets/img/coal.png" alt="Terminate!">
-                                  <div class="media-body">
-                                    <h5 class="mt-0 mb-1">Terminating Coal Mining</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                  </div>
-                                </li>
-                                <li class="media my-5">
-                                  <img class="mr-5 media-list-img" src="../assets/img/bulb.png" alt="Sustainable Energy">
-                                  <div class="media-body pt-4">
-                                    <h5 class="mt-0 mb-1">Promoting Sustainable Energy</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                  </div>
-                                </li>
-                                <li class="media mt-5">
-                                  <img class="mr-5 media-list-img" src="../assets/img/social.png" alt="#NoToCoal">
-                                  <div class="media-body">
-                                    <h5 class="mt-0 mb-1">Social Media Outreach – #NoToCoal</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                  </div>
-                                </li>
-                              </ul>
+                    <div class="modal-body">
+                        <p>Sustainable energy is energy that meets the needs of the present generations without compromising the ability of future generations to meet their own needs. Sustainable energy is about finding clean, renewable sources of energy. Sustainable energy is energy that we will never use up or deplete. It is inexhaustible.<br><br>The habitability of this planet is partially dependent on sustainable energy. Without it, we’ll have to go somewhere else. And, we at <em>terminers.</em> kind of like this place.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
                 </div>
-                <div class="col-md-2"></div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="social-media">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Social Media Outreach – #NoToCoal</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Coal has long been a reliable source of American energy, but it comes with tremendous costs because it is incredibly dirty. The same chemistry that enables coal to produce energy—the breaking down of carbon molecules—also produces a number of profoundly harmful environmental impacts and pollutants that harm public health. Air pollution and global warming are two of the most serious.<br><br>Part of our mission is to utilize social media to inform the masses of the damage this long used energy source has caused and is still causing.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="jumbotron jumbotron-fluid display-img-about text-center p-0">
+            <h1 class="lobster text-warning text-xl jumbotron-padding">What We Do</h1>
+            <h4 class="text-light"><em>Accelerating the transition to renewable energy.</em></h4>
+            <!-- SCROLL DOWN ICON -->
+            <div class="arrow bounce">
+                <img class="fa fa-arrow-down fa-2x" src="../assets/img/down-arrow-white.png">
             </div>
+            <!-- ICON HTML END -->
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-2"></div>
+            <div class="col-12 col-md-8">
+                    <ul class="list-unstyled pl-5 pl-md-0">
+                            <li class="media mb-5 p-3">
+                                <img class="mr-5 media-list-img" src="../assets/img/coal.png" alt="Terminate!">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Terminating Coal Mining</h5>
+                                    <p class="d-none d-md-block">The burning of fossil fuels releases greenhouse gases into the atmosphere, increasing levels of CO2 and other gasses, trapping heat, and contributing to global climate change. Air pollution is another side-effect of fossil fuel use. Air pollution is generally more regional than the effects of carbon dioxide, and can have devastating impacts on local populations and ecosystems.<br><br>Coal is bad. We are fighting to end its mainstream utilization and in turn provide a more sustainable environment and cleaner world.</p>
+                                    <button class="btn btn-outline-dark mt-4 d-inline-block d-md-none" type="button" data-toggle="modal" data-target="#coal">Learn More!</button>
+                                </div>
+                            </li>
+                            <li class="media my-5 p-3">
+                                <img class="mr-5 media-list-img" src="../assets/img/bulb.png" alt="Sustainable Energy">
+                                <div class="media-body pt-4">
+                                    <h5 class="mt-0 mb-1">Promoting Sustainable Energy</h5>
+                                    <p class="d-none d-md-block">Sustainable energy is energy that meets the needs of the present generations without compromising the ability of future generations to meet their own needs. Sustainable energy is about finding clean, renewable sources of energy. Sustainable energy is energy that we will never use up or deplete. It is inexhaustible.<br><br>The habitability of this planet is partially dependent on sustainable energy. Without it, we’ll have to go somewhere else. And, we at <em>terminers.</em> kind of like this place.</p>
+                                    <button class="btn btn-outline-dark mt-4 d-inline-block d-md-none" type="button" data-toggle="modal" data-target="#energy">Learn More!</button>
+                                </div>
+                            </li>
+                            <li class="media mt-5 p-3">
+                                <img class="mr-5 media-list-img" src="../assets/img/social.png" alt="#NoToCoal">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Social Media Outreach – #NoToCoal</h5>
+                                    <p class="d-none d-md-block">Coal has long been a reliable source of American energy, but it comes with tremendous costs because it is incredibly dirty. The same chemistry that enables coal to produce energy—the breaking down of carbon molecules—also produces a number of profoundly harmful environmental impacts and pollutants that harm public health. Air pollution and global warming are two of the most serious.<br><br>Part of our mission is to utilize social media to inform the masses of the damage this long used energy source has caused and is still causing.</p>
+                                    <button class="btn btn-outline-dark mt-4 d-inline-block d-md-none" type="button" data-toggle="modal" data-target="#social-media">Learn More!</button>
+                                </div>
+                            </li>
+                            </ul>
+            </div>
+            <div class="col-md-2"></div>
         </div>
 
         <!-- Optional JavaScript -->
