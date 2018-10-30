@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+
+        <!-- META -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Page Title</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css"/>
+
+        <!-- JavaScript -->
+        <script src="main.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    </head>
+
+
+    <body>
+
+        <h1>Select Your Dream Car!!</h1>
+
+        <form>
+
+            <fieldset>
+                <label for="make">Car Make:</label>
+                <select id="make" name="make">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Merc">Mercedes</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Tesla" selected>Tesla</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label for="model">Car Model:</label>
+                <select id="model" name="model" disabled></select>
+            </fieldset>
+
+        </form>
+
+        <script>
+            $(document).ready( function(){
+
+                var audiModels = ["S2", "S3", "S5", "S7"];
+                var bmwModels = ["2-Series", "3-Series", "4-Series", "5-Series", "7-Series"];
+                var mercModels = ["Class-A", "Class-B", "Class-C", "Class-E", "Class-S", "Class-G"];
+                var lexusModels = ["IS", "ES", "LX"];
+                var teslaModels = ["Model-S", "Model-X", "Model-3"];
+
+                var updateModel = function(){
+                    console.log($("#make").val());
+
+                    $("#model").removeAttr("disabled");
+                    $("#model").html('');
+
+                    if($("#make").val() === "BMW"){
+                        for(var i = 0; i < bmwModels.length; i++){
+                            console.log(bmwModels[i]);
+
+                            var htmlContent = '<option value="' + bmwModels[i] + '">' + bmwModels[i] + '</option>';
+                            // <option value="2-Series">2-Series</option>
+
+                            $("#model").append(htmlContent);
+                        }
+                    }
+
+                    if($("#make").val() === "Audi"){
+                        for(var i = 0; i < audiModels.length; i++){
+                            console.log(audiModels[i]);
+
+                            var htmlContent = '<option value="' + audiModels[i] + '">' + audiModels[i] + '</option>';
+                            // <option value="2-Series">2-Series</option>
+
+                            $("#model").append(htmlContent);
+                        }
+                    }
+
+                    if($("#make").val() === "Merc"){
+                        for(var i = 0; i < mercModels.length; i++){
+                            console.log(mercModels[i]);
+
+                            var htmlContent = '<option value="' + mercModels[i] + '">' + mercModels[i] + '</option>';
+                            // <option value="2-Series">2-Series</option>
+
+                            $("#model").append(htmlContent);
+                        }
+                    }
+
+                    if($("#make").val() === "Lexus"){
+                        for(var i = 0; i < lexusModels.length; i++){
+                            console.log(lexusModels[i]);
+
+                            var htmlContent = '<option value="' + lexusModels[i] + '">' + lexusModels[i] + '</option>';
+                            // <option value="2-Series">2-Series</option>
+
+                            $("#model").append(htmlContent);
+                        }
+                    }
+
+                    if($("#make").val() === "Tesla"){
+                        for(var i = 0; i < teslaModels.length; i++){
+                            console.log(teslaModels[i]);
+
+                            var htmlContent = '<option value="' + teslaModels[i] + '">' + teslaModels[i] + '</option>';
+                            // <option value="2-Series">2-Series</option>
+
+                            $("#model").append(htmlContent);
+                        }
+                    }
+                }
+
+                $("#make").change(function(){
+                    updateModel()
+                    });
+            } );
+        </script>
+        
+    </body>
+
+
+</html>

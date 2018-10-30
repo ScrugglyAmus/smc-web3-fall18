@@ -1,0 +1,18 @@
+/* Bootstrap adjustments */
+.bg-info{
+    background: #0B4F6C !important;
+}
+
+.text-info{
+    color: #0B4F6C !important;
+}
+
+.btn-info{
+    background: #0B4F6C !important;
+    border-color: #0b4f6c !important;
+}
+
+/* MY STYLES */
+.btm-box-shadow{
+    box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.2);
+}

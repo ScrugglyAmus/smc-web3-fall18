@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US">
+
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Athlete Survey</title>
+
+  </head>
+
+
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <div class="container-fluid p-0">
+
+        <div class="row p-3 m-0 bg-info no-gutter btm-box-shadow">
+            <div class="col-12 text-center">
+                <h1 class="text-light">Who Is Your Favorite Athlete?</h1>
+            </div>
+        </div>
+
+        <div class="row m-3 text-light">
+            <div class="col-3"></div>
+            <div class="col-12 col-md-6 text-left text-dark px-5 py-3">
+                <form>
+                    <fieldset>
+                        <h3>Select Sport:</h3>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" name="sport" id="tennis" value="tennis">
+                            <label class="custom-control-label" for="tennis">Tennis</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" name="sport" id="soccer" value="soccer">
+                            <label class="custom-control-label" for="soccer">Soccer</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" name="sport" id="volleyball" value="volleyball">
+                            <label class="custom-control-label" for="volleyball">Volleyball</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" name="sport" id="basketball" value="basketball">
+                            <label class="custom-control-label" for="basketball">Basketball</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="py-3">
+                        <h3>Select Athlete:</h3>
+                        <select id="athlete" name="athlete" class="custom-select" disabled></select>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-info disabled my-3" id="submit-btn">Submit</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready( function(){
+
+            var tennisAthletes = ["Roger Federer", "Rafa Nadal", "Novak Djokovic", "Andy Murray"];
+            var soccerAthletes = ["Lionel Messi", "Cristiano Ronaldo", "Zlatan Ibrahimovic", "Neymar Jr.", "Gareth Bale"];
+            var volleyAthletes = ["Gavin Schmitt", "Earvin Ngapeth", "Saeid Marouf", "Facundo Conte", "Max Holt", "Ivan Zaytsev"];
+            var basketAthletes = ["Lebron James", "Shaquille O'Neal", "Stephen Curry"];
+
+            var updateAthlete = function(){
+
+                $("#athlete").removeAttr("disabled");
+                $("#athlete").html('');
+                $("#submit-btn").removeClass("disabled");
+
+                if($('#tennis').is(':checked')){
+                    console.log("tennis is selected");
+                    for (var i = 0; i < tennisAthletes.length; i++){
+                        console.log(tennisAthletes[i]);
+
+                        var htmlContent = '<option value="' + tennisAthletes[i] + '">' + tennisAthletes[i] + '</option>';
+                        // <option value="2-Series">2-Series</option>
+
+                        $("#athlete").append(htmlContent);
+                    };
+                } else if($('#soccer').is(':checked')){
+                    console.log("soccer is seleceted")
+                    for (var i = 0; i < soccerAthletes.length; i++){
+                        console.log(soccerAthletes[i]);
+
+                        var htmlContent = '<option value="' + soccerAthletes[i] + '">' + soccerAthletes[i] + '</option>';
+                        // <option value="2-Series">2-Series</option>
+
+                        $("#athlete").append(htmlContent);
+                    };
+                } else if($('#volleyball').is(':checked')){
+                    console.log("volleyball is selected")
+                    for (var i = 0; i < volleyAthletes.length; i++){
+                        console.log(volleyAthletes[i]);
+
+                        var htmlContent = '<option value="' + volleyAthletes[i] + '">' + volleyAthletes[i] + '</option>';
+                        // <option value="2-Series">2-Series</option>
+
+                        $("#athlete").append(htmlContent);
+                    };
+                } else if($('#basketball').is(':checked')){
+                    console.log("basketball is selected")
+                    for (var i = 0; i < basketAthletes.length; i++){
+                        console.log(basketAthletes[i]);
+
+                        var htmlContent = '<option value="' + basketAthletes[i] + '">' + basketAthletes[i] + '</option>';
+                        // <option value="2-Series">2-Series</option>
+
+                        $("#athlete").append(htmlContent);
+                    };
+                };
+            };
+
+            $('input:radio[name="sport"]').change(function(){
+                updateAthlete()
+            });
+        });
+    </script>
+
+  </body>
+</html>
