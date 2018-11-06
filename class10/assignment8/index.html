@@ -24,7 +24,10 @@
 
         <main class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 text-dark">
+
+                    <h1 class="text-center mt-5">Give Us Your Info!</h1>
+                    <h4 class="text-center">We “promise” not to share it with anyone.</h4>
 
                     <form class="m-5" id="address-form">
 
@@ -46,26 +49,26 @@
 
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
                             </div>
 
                         </div>
 
                         <div class="form-group">
                             <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St">
                         </div>
 
                         <div class="form-row">
 
                             <div class="form-group col-md-6">
                                 <label for="inputCity">City</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <input type="text" class="form-control" id="city" placeholder="The Twilight Zone">
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="inputState">State</label>
-                                <select id="inputState" class="form-control">
+                                <select id="state" class="form-control">
                                     <option value="AL">Alabama (AL)</option>
                                     <option value="AK">Alaska (AK)</option>
                                     <option value="AZ">Arizona (AZ)</option>
@@ -122,12 +125,12 @@
 
                             <div class="form-group col-md-2">
                                 <label for="inputZip">Zip</label>
-                                <input type="text" class="form-control" id="inputZip">
+                                <input type="text" class="form-control" id="zip" placeholder="90210">
                             </div>
 
                         </div>
 
-                        <button type="submit" class="btn btn-primary disabled" id="submitbutton">Submit</button>
+                        <button type="submit" class="btn btn-danger disabled" id="submitBtn">Submit</button>
 
                     </form>
 
@@ -162,6 +165,10 @@
                         console.log('valid');
                         $(this).parent().find('.alert').css('display', 'none');
                         $(this).css('border-color', '#ced4da')
+                    };
+
+                    if( $('#firstName' && '#lastName' && '#email' && '#city' && '#state' && '#zip').val().length > 0){
+                        $('#submitBtn').removeClass('disabled');
                     };
                 });
             });
