@@ -1,0 +1,487 @@
+/* INSPIRATIONAL CSS ANIMATIONS SITE: https://daneden.github.io/animate.css/ */
+
+/* STYLES */
+.direction-text{
+    font-size: 32pt;
+    text-align: center;
+    padding: 0px;
+    color: hotpink;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 0px 40px 60px;
+    background-color: black;
+    float: left
+}
+
+section{
+    clear: both;
+}
+
+h1{
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 40px;
+}
+
+.color{
+    animation: colorShift 3s linear infinite;
+}
+
+.multicolor{
+    animation: multicolorShift 3s linear infinite;
+}
+
+.blink{
+    animation: colorBlink 2s linear infinite;
+}
+
+.border-radius{
+    animation: borderRadius 3s ease infinite;
+}
+
+.border-radius-staggered{
+    animation: borderRadiusStaggered 3s linear infinite;
+}
+
+.border-radius-opposite{
+    animation: borderRadiusOpposite 3s linear infinite;
+}
+
+/* .triangle-rotate{
+    animation: triangleMake 3s linear infinite;
+    width: 0px;
+    height: 0px;
+    /* CSS TRIANGLE */
+    /* border-right: 100px solid white;
+    border-left: 100px solid white;
+    border-bottom: 166px solid black; 
+} */
+
+.bounce-bg{
+    background: black;
+}
+
+.bounce-ball{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.bounce-simple{
+    animation: bounceSimple 2s ease infinite;
+    margin-left: 75px;
+}
+
+.bounce-out{
+    animation: bounceOut 2s ease-out infinite;
+    margin-left: 75px;
+    margin-top: 75px;
+}
+
+.bounce-out-white{
+    animation: bounceOutWhite 2s ease-out infinite;
+    background: white;
+    opacity: 0;
+}
+
+.bounce-in{
+    animation: bounceIn 1.5s linear infinite;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.bounce-rubber{
+    animation: bounceRubber .9s ease infinite;
+    width: 180px;
+    height: 180px;
+    background: transparent;
+    border: 10px solid black;
+}
+
+.rotation-cover, .roll-cover{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    margin-top: 0;
+    float: left;
+}
+
+.box-ball-rotation{
+    animation: boxBallRotation 3s ease-out infinite;
+    margin: 0;
+}
+
+.rotation-reverse{
+    animation: rotationReverse 5s ease infinite;
+}
+
+.rotation-roll{
+    animation: rotationRoll 3s ease infinite;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    border-top: solid black;
+    border-right: solid black;
+    border-left: solid black;
+    border-bottom: solid black;
+    border-width: 30px;
+    margin-top: 140px;
+    margin-left: 0;
+}
+
+.hide-animation{
+    animation: none;
+}
+
+/* ANIMATIONS */
+@keyframes colorShift{
+    0% {
+        background-color: white;
+    }
+    50%{
+        background-color: black;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes multicolorShift{
+    0%{
+        background-color: hotpink;
+    }
+    16.7%{
+        background-color: purple; 
+    }
+    33.4%{
+        background-color: blue;
+    }
+    50.1%{
+        background-color: green;
+    }
+    66.8%{
+        background-color: yellow;
+    }
+    83.5%{
+        background-color: orange;
+    }
+    100%{
+        background-color: hotpink;
+    }
+}
+
+@keyframes colorBlink{
+    0%, 35%, 65%, 100%{
+        background: black;
+    }
+    48%, 52%{
+        background: hotpink;
+    }
+}
+
+@keyframes borderRadius{
+    0%{
+        border-radius: 0;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 0;
+    }
+}
+
+@keyframes borderRadiusStaggered{
+    0%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    12.5%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    25%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    37.5%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 0;
+    }
+    50%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    62.5%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    75%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    87.5%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+    }
+    100%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@keyframes borderRadiusOpposite{
+    0%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 0;
+    }
+    25%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    50%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+    }
+    75%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    100%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 0;
+    }
+}
+
+/* @keyframes triangleMake{
+    0%{
+        border-right: 100px solid black;
+        border-left: 100px solid black;
+        border-bottom: 166px solid black;
+    }
+    50%{
+        border-right: 100px solid white;
+        border-left: 100px solid white;
+        border-bottom: 166px solid black;
+    }
+    100%{
+        border-right: 100px solid black;
+        border-left: 100px solid black;
+        border-bottom: 166px solid black;
+    }
+} */
+
+@keyframes bounceSimple{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 100;
+    }
+    35%{
+        transform: translateY(150px);
+    }
+    45%{
+        transform: translateY(100px);
+    }
+    55%{
+        transform: translateY(150px);
+    }
+    60%{
+        transform: translateY(125px);
+    }
+    65%{
+        transform: translatey(150px);
+    }
+    90%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes bounceOut{
+    0%{
+       background-color: black;
+       transform: scale(0); 
+    }
+    16%{
+        transform: scale(1.5);
+    }
+    25.6%{
+        transform: scale(.5);
+    }
+    32%{
+        transform: scale(1);
+        border-radius: 50%;
+    }
+    50%, 100%{
+        transform: scale(4);
+        border-radius: 0;
+    }
+}
+
+@keyframes bounceOutWhite{
+    0%, 50%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    66%{
+        transform: scale(.45);
+    }
+    75.6%{
+        transform: scale(.25);
+    }
+    82%{
+        transform: scale(.45);
+        border-radius: 50%;
+    }
+    100%{
+        transform: scale(1.5);
+        border-radius: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn{
+    0%{
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    15%{
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    24%{
+        opacity: 1;
+        transform: scale(0.89);
+    }
+    30%, 100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceRubber{
+    0%{
+        transform: scale3d(1, 1, 1);
+    }
+    30%{
+        transform: scale3d(1.5, 0.5, 1);
+    }
+    40%{
+        transform: scale3d(0.5, 1.75, 1);
+    }
+    50%{
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    65%{
+        transform: scale3d(0.8, 1.15, 1);
+    }
+    75%{
+        transform: scale3d(1.15, 0.8, 1);
+    }
+    100%{
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes boxBallRotation{
+    0%{
+        border-radius: 50%;
+        transform: scale(0) rotate(0deg);
+        /* background-color: white; */
+    }
+    45%{
+        border-radius: 0%;
+        transform: scale(1) rotate(360deg);
+        background-color: black;
+    }
+    50%{
+        border-radius: 0%;
+        transform: scale(1) rotate(360deg);
+        /* background-color: white; */
+    }
+    55%{
+        border-radius: 0%;
+        transform: scale(1) rotate(360deg);
+        background-color: black;
+    }
+    100%{
+        border-radius: 50%;
+        transform: scale(0) rotate(0deg);
+        /* background-color: white; */
+    }
+}
+
+@keyframes rotationReverse{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(720deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotationRoll{
+    0%{
+        transform: rotate(0deg);
+        margin-left: 0px;
+        border-bottom-color: hotpink;
+        border-right-color: hotpink;
+    }
+    50%{
+        transform: rotate(600deg);
+        margin-left: 480px;
+        border-bottom-color: hotpink;
+        border-right-color: hotpink;
+    }
+    100%{
+        border-bottom-color: hotpink;
+        border-right-color: hotpink;
+    }
+}

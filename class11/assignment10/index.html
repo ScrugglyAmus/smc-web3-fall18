@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html>
+
+
+        <head>
+
+            <!-- META TAGS -->
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Page Title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- CSS -->
+            <link href="styles.css" type="text/css" rel="stylesheet">
+
+            <!-- jQuery (for hiding and showing animations) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        </head>
+
+
+        <body>
+
+            <h1 class="direction-text">HOVER OVER ANY SQUARE TO SEE THE ANIMATION</h1>
+            
+            <section class="color-group">
+                <h1>Color Animations</h1>
+                <div class="box color hide-animation"></div>
+                <div class="box multicolor hide-animation"></div>
+                <div class="box blink hide-animation"></div>
+            </section>
+
+            <section class="radius-group">
+                <h1>Border Radius Animations</h1>
+                <div class="box border-radius hide-animation"></div>
+                <div class="box border-radius-staggered hide-animation"></div>
+                <div class="box border-radius-opposite hide-animation"></div>
+            </section>
+
+            <!-- <section class="triangle-group">
+                <div class="box triangle-rotate"></div>
+            </section> -->
+
+            <section class="bounce-group">
+                <h1>Bounce Animations</h1>
+                <div class="box bounce-bg">
+                    <div class="bounce-simple bounce-ball hide-animation"></div>
+                </div>
+                <div class="box bounce-bg">
+                    <div class="bounce-out bounce-ball hide-animation">
+                        <div class="bounce-out-white bounce-ball hide-animation"></div>
+                    </div>
+                </div>
+                <div class="box bounce-bg">
+                    <div class="bounce-in bounce-ball hide-animation"></div>
+                </div>
+                <div class="box bounce-bg">
+                    <div class="bounce-rubber bounce-ball hide-animation"></div>
+                </div>
+            </section>
+
+            <section class="rotation-group">
+                <h1>Rotation Animations</h1>
+                <div class="rotation-cover">
+                    <div class="box box-ball-rotation hide-animation"></div>
+                </div>
+                <div class="box rotation-reverse hide-animation"></div>
+                <div class="roll-cover">
+                    <div class="box rotation-roll hide-animation"></div>
+                </div>
+            </section>
+
+            <script>
+                    $(document).ready(function(){
+                        $('.box').mouseenter(function(){
+                            $(this).removeClass('hide-animation');
+                        });
+                        $('.box').mouseout(function(){
+                            $(this).addClass('hide-animation');
+                        });
+        
+                        $('.bounce-bg').mouseover(function(){
+                            $('div', this).removeClass('hide-animation');
+                            $(this).css('background-color', 'white');
+                        });
+                        $('.bounce-bg').mouseout(function(){
+                            $('div', this).addClass('hide-animation');
+                            $(this).css('background-color', 'black');
+                        });
+        
+                        $('.rotation-cover').mouseover(function(){
+                            $('.box-ball-rotation').removeClass('hide-animation');
+                            $('.box-ball-rotation').css('z-index', '2');
+                            $(this).css('z-index', '1');
+                            $(this).css('background-color', 'white');
+                        });
+                        $('.rotation-cover').mouseout(function(){
+                            $('.box-ball-rotation').addClass('hide-animation');
+                            $('.box-ball-rotation').css('z-index', '1');
+                            $(this).css('z-index', '2');
+                            $(this).css('background-color', 'black');
+                        });
+        
+                        $('.roll-cover').mouseover(function(){
+                            $('.rotation-roll').removeClass('hide-animation');
+                            $('.rotation-roll').css('z-index', '2');
+                            $(this).css('z-index', '1');
+                            $(this).css('background-color', 'white');
+                        });
+                        $('.roll-cover').mouseout(function(){
+                            $('.rotation-roll').addClass('hide-animation');
+                            $('.rotation-roll').css('z-index', '1');
+                            $(this).css('z-index', '2');
+                            $(this).css('background-color', 'black');
+                        });
+                    });
+                </script>
+
+        </body>
+
+
+    </html>

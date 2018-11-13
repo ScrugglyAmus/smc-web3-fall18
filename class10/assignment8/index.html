@@ -130,7 +130,7 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-danger disabled" id="submitBtn">Submit</button>
+                        <button type="submit" class="btn btn-danger" id="submitBtn" disabled>Submit</button>
 
                     </form>
 
@@ -157,18 +157,17 @@
 
                     console.log('blurred element')
 
+                    $(this).parent().find('.alert').remove();
+                    $(this).css('border-color', '#ced4da');
+
                     if( $(this).val().length === 0 ) {
                         console.log('not valid')
                         $(this).parent().append(alertMessage);
                         $(this).css('border-color', 'red');
-                    } else {
-                        console.log('valid');
-                        $(this).parent().find('.alert').css('display', 'none');
-                        $(this).css('border-color', '#ced4da')
-                    };
+                    }
 
                     if( $('#firstName' && '#lastName' && '#email' && '#city' && '#state' && '#zip').val().length > 0){
-                        $('#submitBtn').removeClass('disabled');
+                        $('#submitBtn').removeAttr('disabled');
                     };
                 });
             });
