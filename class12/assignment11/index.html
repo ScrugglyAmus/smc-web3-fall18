@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+        <!-- META TAGS -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Canvas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <style>
+            body{
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+
+            h1{
+                text-align: center;
+            }
+
+            .toggle-text{
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            .toggle-text:hover{
+                cursor: pointer;
+                color: hotpink;
+            }
+
+            #box, #box-2{
+                position: absolute;
+                top: 80px;
+                left: 50%;
+                margin-left: -300px;
+            }
+
+            #box{
+                border: 1px solid red;
+            }
+
+            #box-2{
+                border: 2px solid black;
+                background: #1fddff;
+            }
+
+            .invisible{
+                visibility: hidden;
+            }
+        </style>
+        
+        <!-- jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+
+    <body>
+
+        <h1 class="toggle-text">Click to View Other Canvas</h1>
+
+        <canvas id="box" width="600" height="480">
+            Get a new browser to see this!
+        </canvas>
+
+        <canvas id="box-2" width="600" height="480">
+            Get a new browser to see this!
+        </canvas>
+
+        <script>
+            // CANVAS 1
+            var canvas = document.getElementById("box");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = "rgba(225, 125, 225, .5";
+            context.fillRect(10, 10, 580, 460);
+
+            context.fillStyle = "rgba(0, 0, 225, .3";
+            context.fillRect(20, 20, 560, 440);
+
+            context.fillStyle = "rgba(255, 255, 255, 1";
+            context.fillRect(10, 10, 80, 80);
+            context.fillRect(90, 90, 70, 70);
+            context.fillRect(160, 160, 60, 60);
+            context.fillRect(220, 220, 50, 50);
+            context.fillRect(270, 270, 40, 40);
+            context.fillRect(310, 310, 30, 30);
+            context.fillRect(340, 340, 20, 20);
+            context.fillRect(360, 360, 10, 10);
+
+            context.fillStyle = "rgba(255, 255, 0, .4";
+            context.fillRect(50, 50, 460, 340);
+
+            context.fillStyle = "rgba(255, 255, 255, 1";
+            context.fillRect(520, 400, 80, 80);
+            context.fillRect(450, 330, 70, 70);
+            context.fillRect(390, 270, 60, 60);
+            context.fillRect(340, 220, 50, 50);
+            context.fillRect(300, 180, 40, 40);
+            context.fillRect(270, 150, 30, 30);
+            context.fillRect(250, 130, 20, 20);
+            context.fillRect(240, 120, 10, 10);
+
+            context.fillStyle = "rgba(255, 100, 20, .4";
+            context.fillRect(400, 50, 120, 460);
+
+
+            // CANVAS 2
+            var cvs = document.getElementById("box-2");
+            var ctx = cvs.getContext("2d");
+            var grd = ctx.createRadialGradient(300,240,25,300,240,175);
+                grd.addColorStop(0,"#ff4b1f");
+                grd.addColorStop(1,"#db36a4");
+            
+            // PEACE SIGN
+            ctx.lineWidth = 10;
+            ctx.fillStyle = grd;
+            ctx.strokeStyle = "rgba(255, 255, 255, 1)";
+            ctx.beginPath();
+            ctx.arc(300, 240, 150, 0, 2 * Math.PI);
+            ctx.fill()
+            ctx.moveTo(300, 90);
+            ctx.lineTo(300, 390);
+            ctx.moveTo(300, 240);
+            ctx.lineTo(415, 330);
+            ctx.moveTo(300, 240);
+            ctx.lineTo(185, 330);
+            ctx.stroke();
+
+            // TEXT
+            ctx.font = '48px Helvetica';
+            ctx.fillStyle = "rgba(255, 255, 255, 1)";
+            ctx.lineWidth = 2;
+            ctx.fillText('Peace & Love', 150.5625, 60);
+            ctx.strokeText('Come Together!', 129.24609375, 455)
+
+            var text = ctx.measureText('Come Together!'); // TextMetrics object
+            console.log(text.width); // 298.875 (Peace & Love), 341.5078125 (Come Together!)
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $('.toggle-text').on('click', function(){
+                    console.log('clicked');
+                    $('#box-2').toggleClass('invisible');
+
+                });
+            });
+        </script>
+        
+    </body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+        <!-- META TAGS -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Canvas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <style>
+            #box{
+                border: 1px solid red;
+            }
+        </style>
+        
+        <!-- JAVASCRIPT -->
+        <script src="main.js"></script>
+    </head>
+
+
+    <body>
+
+        <canvas id="box" width="600" height="480">
+            Get a new browser to see this!
+        </canvas>
+
+        <script>
+            var canvas = document.getElementById("box");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = "rgb(255, 0, 125)";
+            context.fillRect(30, 30, 200, 300);
+
+            context.fillStyle = "rgb(35, 125, 125"
+            context.fillRect(120, 120, 300, 150);
+        </script>
+        
+    </body>
+
+
+</html>
