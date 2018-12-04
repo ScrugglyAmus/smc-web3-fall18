@@ -1,0 +1,37 @@
+body, h2, .product-name, .splash-subtitle, .didot{
+    font-family: didot;
+}
+
+p, form, .cd-cart-trigger .count, .cd-cart, .alert, .call-button, .btn-primary{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size: 26pt !important;
+}
+
+.product-name{
+    font-size: 20pt;
+}
+
+.quantity, .delete-item, .price, .select-qty{
+    font-size: 18pt !important;
+}
+
+.select-qty-sp, .splash-subtitle{
+    font-size: 10pt !important;
+}
+
+nav{
+    font-size: 14pt;
+}
+
+.splash-text{
+    font-size: 100pt;
+}
+
+.text-shadow{
+    -webkit-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    -moz-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}

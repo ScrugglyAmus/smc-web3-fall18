@@ -1,0 +1,39 @@
+img{
+    max-width: 100%;
+    overflow: auto;
+}
+
+.pdp-desc{
+    margin: 0 auto;
+}
+
+.splash-body{
+    position: relative;
+}
+
+.splash-text{
+    margin-top: 200px;
+}
+
+.fig-101{
+    width: 60px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.splash-subtitle{
+    position: absolute;
+    bottom: 0px;
+    left: 80px;
+}
+
+.splash-nav{
+    margin-top: -60px;
+    transform: translateY(60px);
+    z-index: 1;
+}
+
+.btn-blog-post{
+    width: 150px;
+}

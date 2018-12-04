@@ -1,0 +1,159 @@
+<!doctype html>
+
+<html lang="en-US">
+
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../js/add-to-cart-interaction-master/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+
+        <title>Randy's – Shop</title>
+
+    </head>
+
+
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+
+                    <nav class="navbar navbar-expand-md navbar-light bg-none px-4">
+                        <a class="navbar-brand text-dark" href="../index.html">Randy's</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle active" href="pages/shop.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Shop
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="shop.html">Playing Cards</a>
+                                    <a class="dropdown-item" href="#">Poker Chips</a>
+                                    <a class="dropdown-item" href="#">Parlour Games</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#">Help</a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="faq.html">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- CART IMG RIGHT
+                        <div class="navbar-collapse collapse order-3 dual-collapse2">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link cart-icon float-left" href="#"><img src="../assets/img/cart-icon.png"></a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </nav>
+
+                    <div class="row">
+                        <div class="col-1 col-md-3"></div>
+                        <div class="col-10 col-md-6 mt-4 contact-form px-4 pb-4 pt-3">
+
+                            <div class="row my-4">
+                                <div class="col-6">
+                                    <h4 class="mt-1">Call us at:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <a class="btn cd-add-to-cart btn-secondary text-light call-button" href="tel:3109066048">310-240-9992</a>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="full-name" class="didot">Full Name</label>
+                                    <input type="text" class="form-control my-2" id="full-name" placeholder="Randy Green">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="didot">Email address</label>
+                                    <input type="email" class="form-control my-2" id="email" placeholder="randy@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="textarea" class="didot">Message</label>
+                                    <textarea class="form-control" id="text-area" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn cd-add-to-cart btn-secondary text-light call-button my-3" id="submit-btn" disabled>Send Email</button>
+                            </form>
+                        </div>
+                        <div class="col-1 col-md-3"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <!-- CART INTERACTION -->
+        <script src="../js/add-to-cart-interaction-master/js/main.js"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                // $('select').change(function(){
+
+                //     if($("#instructive-option").is(':selected')){
+                //         $('.btn-success').attr('disabled', true);
+                //     } else {
+                //         $('.btn-success').removeAttr('disabled')
+                //     }
+
+                // });
+
+                // VALIDATION
+                document.getElementById("full-name").focus();
+
+                $('.form-control').blur(function(){
+
+                    var alertMessage = '<p class="alert m-0 text-danger">Please fill out this field.</p>';
+
+                    console.log('blurred element')
+
+                    $(this).parent().find('.alert').remove();
+                    $(this).css('border-color', '#ced4da');
+
+                    if( $(this).val().length === 0 ) {
+                        console.log('not valid')
+                        $(this).parent().append(alertMessage);
+                        $(this).css('border-color', 'red');
+                    }
+
+                    if( $('#full-name' && '#textarea' && '#email').val().length > 0){
+                        $('#submit-btn').removeAttr('disabled');
+                    };
+                });
+            });
+        </script>
+
+    </body>
+
+
+</html>
