@@ -76,14 +76,24 @@ jQuery(document).ready(function($){
 
 	function addToCart(trigger) {
 		var cartIsEmpty = cartWrapper.hasClass('empty');
-		//update cart product list
-		addProduct();
-		//update number of items 
-		updateCartCount(cartIsEmpty);
-		//update total price
-		updateCartTotal(trigger.data('price'), true);
-		//show cart
-		cartWrapper.removeClass('empty');
+		var itemCount = $('#itemCountToCart').val();
+		if(cartIsEmpty){
+			//update cart product list
+			addProduct();
+			//update number of items 
+			updateCartCount(cartIsEmpty, itemCount );
+			//update total price
+			updateCartTotal(trigger.data('price'), true);
+			//show cart
+			cartWrapper.removeClass('empty');
+		}
+		else {
+			//update number of items 
+			updateCartCount(cartIsEmpty, itemCount );
+			//update total price
+			updateCartTotal(trigger.data('price'), true);
+		}
+		
 	}
 
 	function addProduct() {
