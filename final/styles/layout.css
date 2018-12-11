@@ -45,3 +45,7 @@ img{
 ul{
     list-style-type: none;
 }
+
+.mobile-home-link{
+    margin: 0 auto;
+}

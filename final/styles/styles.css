@@ -188,6 +188,10 @@ nav{
     background-color: #f8f8f8;
 }
 
+.dropdown-mobile-menu{
+    border: none;
+}
+
 .dropdown-item:hover{
     background-color: brown;
     color: #f8f8f8 !important;
