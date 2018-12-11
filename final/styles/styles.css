@@ -19,10 +19,6 @@ body{
     background-repeat: none;
 }
 
-.trunkated{
-    height: calc(100vh - 50px);
-}
-
 ul{
     list-style-type: none;
 }
@@ -35,17 +31,17 @@ a{
     text-decoration: none !important;
 }
 
-.plp-listing, .card, .btn-read, .btn-blog-post, .btn-block{
+.plp-listing, .card, .btn-read, .btn-blog-post, .btn-block, .btn-x{
     transition: all .2s;
 }
 
-.plp-listing:hover, .card:hover, .btn-blog-post:hover {
+.plp-listing:hover, .card:hover, .btn-x:hover{
     transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
-.plp-listing:active, .btn-read:active, .btn-blog-post:active, .btn-block:active {
+.plp-listing:active, .btn-read:active, .btn-block:active, .btn-x:active{
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
     transform: scale(0.9);
@@ -125,9 +121,20 @@ a{
     background-color: #261605;
 }
 
-.my-card{
+.my-card, .checkout-cart-total{
     border-radius: 10px;
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.25);
+    border: none;
+}
+
+.card-body{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-img-top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .pdp-deets{
@@ -169,7 +176,7 @@ nav{
 }
 
 .subnav-border{
-    border-bottom: 2px solid brown;
+    border-top: 2px solid brown;
 }
 
 .dropdown-menu{
@@ -248,6 +255,31 @@ hr{
     background-color: brown;
 }
 
-.splash-background-color{
-    background-color: #f8f8f8;
+.splash-background-color, .index-nav, .cart-total{
+    background-color: #f8f8f8 !important;
+}
+
+.btn-blog-post:hover, .btn-blog-post:active, .btn-block:hover, .btn-block:active{
+    transform: scale(1);
+}
+
+.checkout-cart-total{
+    height: 100%;
+}
+
+.checkout-qty{
+    width: 180px;
+}
+
+.btn-x{
+    width: 50px;
+    cursor: pointer !important;
+}
+
+.subnav-link{
+    color: #545b62;
+}
+
+.subnav-link:hover, .subnav-link:active{
+    color: brown !important;
 }

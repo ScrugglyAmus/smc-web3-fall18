@@ -49,12 +49,17 @@ h2{
     font-size: 10pt !important;
 }
 
-nav{
+nav, .splash-link{
     font-size: 14pt;
 }
 
-.splash-text{
-    font-size: 100pt;
+.nav-logo{
+    font-size: 24pt;
+}
+
+.splash-heading{
+    font-size: 48pt;
+    font-weight: 400;
 }
 
 .text-shadow{
