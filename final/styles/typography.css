@@ -1,9 +1,36 @@
+@font-face{
+    font-family: oswald;
+    src: url(../assets/fonts/oswald/oswald-regular-webfont.woff);
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@font-face{
+    font-family: avant garde;
+    src: url(../assets/fonts/avant-garde/avantn-webfont.woff);
+}
+
 body, h2, .product-name, .splash-subtitle, .didot{
     font-family: didot;
 }
 
 p, form, .cd-cart-trigger .count, .cd-cart, .alert, .call-button, .btn-primary{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link, .dropdown-item, .oswald{
+    font-family: "Oswald-ExtraLight";
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.avenir{
+    font-family: "Avenir";
+}
+
+.avant-garde{
+    font-family: avant garde;
 }
 
 h2{

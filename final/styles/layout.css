@@ -37,3 +37,11 @@ img{
 .btn-blog-post{
     width: 150px;
 }
+
+.nav-logo{
+    width: 120px;
+}
+
+ul{
+    list-style-type: none;
+}
